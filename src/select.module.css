@@ -10,12 +10,18 @@
   border-radius: 0.25em;
   outline: none;
 }
+
 .container:focus {
   border-color: hsl(200, 100%, 50%);
 }
+
 .value {
   flex-grow: 1;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
 }
+
 .clear-btn {
   background: none;
   color: #777;
@@ -25,16 +31,18 @@
   padding: 0;
   font-size: 1.25em;
 }
+
 .clear-btn:focus,
 .clear-btn:hover {
   color: #333;
 }
 
 .divider {
-  background: #777;
+  background-color: #777;
   align-self: stretch;
   width: 0.05em;
 }
+
 .caret {
   translate: 0 25%;
   border: 0.25em solid transparent;
@@ -61,13 +69,17 @@
 .options.show {
   display: block;
 }
+
 .option {
   padding: 0.25em 0.5em;
   cursor: pointer;
 }
-.option.highlighted {
-  background-color: hsl(200, 100%, 50%);
-}
+
 .option.selected {
-  background-color: hsl(200, 100%, 70%);
+  background-color: hsl(209, 100%, 50%);
+  color: white;
+}
+
+.option.highlighted {
+  background-color: hsla(200, 100%, 50%, 0.226);
 }
